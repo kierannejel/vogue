@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VØGUE | Wear Your Identity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">VØGUE<span>.</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="cart-btn" onclick="showCart()">
+                    BAG (<span id="cart-count">0</span>)
+                </button>
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">NEW COLLECTION / 2026</p>
+            <h1>WEAR YOUR<br><span>IDENTITY.</span></h1>
+            <p class="hero-description">
+                Fashion isn't about following trends.
+                It's about creating your own.
+            </p>
+            <a href="#shop" class="main-btn">EXPLORE COLLECTION ↗</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNfxBIpZ6Htz9RMb9W3onuW3LNk-IFe26nO0mUBg1jymK7pJA7UnKvD5aE&s=10" alt="Fashion model">
+            <div class="image-label">BE BOLD. BE DIFFERENT.</div>
+        </div>
+
+        <div class="hero-number">01 / 04</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div>
+            STREETWEAR ✳ PREMIUM QUALITY ✳ YOUR STYLE ✳
+            STREETWEAR ✳ PREMIUM QUALITY ✳ YOUR STYLE ✳
+        </div>
+    </div>
+
+    <!-- SHOP -->
+    <section class="shop-section" id="shop">
+        <div class="section-heading">
+            <div>
+                <p class="tagline">CURATED FOR YOU</p>
+                <h2>THE COLLECTION<span>.</span></h2>
+            </div>
+            <p>Discover your next favorite fit.</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="shirts">SHIRTS</button>
+            <button class="filter-btn" data-filter="hoodies">HOODIES</button>
+            <button class="filter-btn" data-filter="pants">PANTS</button>
+        </div>
+
+        <div class="products">
+
+            <div class="product-card" data-category="shirts">
+                <div class="product-image">
+                    <img src="https://shop.bench.com.ph/cdn/shop/files/BOT3043BK3_FL_F_ZA_3bd87ac5-826b-415c-bd15-f5488090ffda.jpg?v=1753673177" alt="Classic tee">
+                    <span class="product-tag">BESTSELLER</span>
+                    <button class="quick-add" onclick="addToCart('Essential Oversized Tee', 899)">+ ADD TO BAG</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Essential Oversized Tee</h3>
+                        <p>Black / Premium Cotton</p>
+                    </div>
+                    <strong>₱899</strong>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="hoodies">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCmIVdEoRrgLGTRNFXJa9VSfTFbnNGbbY-mSOQnLMr8g&s=10">
+                    <button class="quick-add" onclick="addToCart('Urban Street Hoodie', 1599)">+ ADD TO BAG</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Urban Street Hoodie</h3>
+                        <p>Gray / Heavyweight</p>
+                    </div>
+                    <strong>₱1,599</strong>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="pants">
+                <div class="product-image">
+                    <img src="https://shop.bench.com.ph/cdn/shop/files/BDP0327DB3_FL_F_ZA_762x.jpg?v=1792639464" alt="Denim pants">
+                    <button class="quick-add" onclick="addToCart('Classic Denim Jeans', 1299)">+ ADD TO BAG</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Classic Denim Jeans</h3>
+                        <p>Blue / Relaxed Fit</p>
+                    </div>
+                    <strong>₱1,299</strong>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="shirts">
+                <div class="product-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDO43JUxmHdTSJ4apyKDFurUfbNi-dKtxs81o9E-hRjM2xIbYHVtg-SI0&s=10" alt="Fashion shirt">
+                    <span class="product-tag">NEW</span>
+                    <button class="quick-add" onclick="addToCart('Minimal Summer Shirt', 999)">+ ADD TO BAG</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Minimal Summer Shirt</h3>
+                        <p>White / Relaxed Fit</p>
+                    </div>
+                    <strong>₱999</strong>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjNOYpACg3HjR5bgBY9nzMpT1x3lKxRVGezjdlVlcxlS_0HKdZf6QwApH2&s=10" alt="Fashion collection">
+        </div>
+        <div class="about-content">
+            <p class="tagline">OUR PHILOSOPHY</p>
+            <h2>DON'T FIT IN.<br><span>STAND OUT.</span></h2>
+            <p>
+                VØGUE is more than just clothing. It's a movement
+                for those who aren't afraid to express themselves.
+                Designed for confidence, built for individuality.
+            </p>
+            <a href="#shop" class="main-btn">FIND YOUR STYLE ↗</a>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter" id="contact">
+        <p class="tagline">STAY IN THE LOOP</p>
+        <h2>BE THE FIRST TO KNOW<span>.</span></h2>
+        <p>Get updates on new drops and exclusive collections.</p>
+
+        <form id="newsletter-form">
+            <input type="email" id="email" placeholder="Enter your email address" required>
+            <button type="submit">SUBSCRIBE ↗</button>
+        </form>
+        <p id="message"></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#" class="logo">VØGUE<span>.</span></a>
+        <p>© 2026 VØGUE. ALL RIGHTS RESERVED.</p>
+        <div class="socials">
+            <a href="#">INSTAGRAM</a>
+            <a href="#">FACEBOOK</a>
+            <a href="#">TIKTOK</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
